@@ -72,7 +72,7 @@ export const Chooser: React.FC = () => {
                 
                 <><Typography variant='h2' id="parent-modal-title">{loadingMessage}</Typography>
                 <Typography variant='body1' id="parent-modal-description">
-                    Let's go with...
+                    Let{"\'"}s go with...
                 </Typography>
                 </> : 
                 <>
