@@ -27,7 +27,7 @@ export const events: Array<Event> = [
         description: "YOU NERD",
         visibleTimePeriod: {
             start: new Date(Date.parse("2022-07-06T20:30:00.000+10:00")),
-            end: new Date(Date.parse("2022-08-06T16:40:00.000+10:00")),
+            end: new Date(Date.parse("2022-08-06T16:20:00.000+10:00")),
         }
     },
     {
@@ -49,7 +49,7 @@ export const events: Array<Event> = [
         description: "New Job, new me",
         visibleTimePeriod: {
             start: new Date(Date.parse("2022-08-06T17:15:00.000+10:00")),
-            end: new Date(Date.parse("2022-08-06T17:30:00.000+10:00")),
+            end: new Date(Date.parse("2022-08-06T17:50:00.000+10:00")),
         }
     },
     {
