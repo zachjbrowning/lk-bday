@@ -2,8 +2,7 @@ import { createTheme } from "@mui/material";
 
 export const theme = createTheme({
     palette: {
-        mode: 'light',
-        
+        mode: 'light'        
     },
     components: {
         MuiPaper: {
@@ -11,6 +10,14 @@ export const theme = createTheme({
                 root: {
                     padding: '10px',
                     marginTop: '20px'
+                }
+            }
+        },
+        MuiCssBaseline: {
+            styleOverrides: {
+                body: {
+                    padding: 0,
+                    margin: 0
                 }
             }
         }

@@ -1,18 +1,21 @@
 import React, { useCallback, useEffect } from 'react';
 import { Button, Typography, Modal, Box, Paper } from "@mui/material";
 import Image from 'next/image'
-
+import {useAudio} from '../AudioPlayer/useAudio';
 const style = {
     position: 'absolute' as 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: '50%',
+    justifyContent: 'center',
+    minWidth: 'min-content',
+    hieght: 'max-content',
     bgcolor: 'background.paper',
     boxShadow: 24,
-    pt: 2,
-    px: 4,
-    pb: 3,
+    
   };
 type Person = {
     name: string,
@@ -28,54 +31,62 @@ const people: People = [
 
 ]
 export const Chooser: React.FC = () => {
+    const playChoose = useAudio('/Voice.mp3');
     const [open, setOpen] = React.useState(false);
     const [choosing, setChoosing] = React.useState(false);
-    const [messageLength, setmessageLength] = React.useState(false);
     const [choice, setChoice] = React.useState<Person>(Lorna);
+    const [loadingMessage, setLoadingMessage] = React.useState<string>("uh");
 
     const handleChoice = useCallback(() => {
+        setChoice(people[Math.floor(Math.random() * people.length)]);
         if (open) setChoosing(false);
         
     }, [open]);
-
+    
     const handleOpen = () => {
         setOpen(true);
         setChoosing(true);
+        playChoose();
     };
     const handleClose = () => {
         setOpen(false);
         setChoosing(false);
+        setLoadingMessage('uh..')
     };
 
     useEffect(() => {
-        if (open) setTimeout(handleChoice, 3000);
+        if (open) {
+            setTimeout(() => setLoadingMessage('uhhhh...'), 1000);
+            setTimeout(() => setLoadingMessage('uhhhh ummm...'), 2000);
+            setTimeout(handleChoice, 3000);
+        
+        }
     }, [handleChoice, open])
 
     return (
         <>
-            <Button onClick={handleOpen}>Open modal</Button>
             <Modal
             open={open}
             onClose={handleClose}
             aria-labelledby="parent-modal-title"
             aria-describedby="parent-modal-description"
             >
-            <Paper sx={{  ...style, width: 'max-content' }}>
+            <Paper sx={{  ...style  }}>
                 { choosing ? 
                 
-                <><Typography variant='h2' id="parent-modal-title">uhhhh ummm...</Typography>
+                <><Typography variant='h2' id="parent-modal-title">{loadingMessage}</Typography>
                 <Typography variant='body1' id="parent-modal-description">
                     Let's go with...
                 </Typography>
                 </> : 
                 <>
                     <Image src={choice.img} width={100} height={100} alt={choice.name} />
-                    <Typography variant='h4' >{choice.name}! </Typography>
+                    <Typography variant='h4' align='center' >{choice.name}! </Typography>
                 </>}
             </Paper>
             </Modal>
-            <Typography variant="h2">Ch-Ch-Ch-ChoooOOoser!</Typography>
-            <Button variant='contained' type='button'>Choose</Button>
+            <Typography variant="h2">Chooser!</Typography>
+            <Button variant='contained' type='button' onClick={handleOpen}>Choose</Button>
         </>
     )
 }

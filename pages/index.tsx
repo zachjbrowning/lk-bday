@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container sx={{ width: '100%'}} color='white'>
+      <Container sx={{ width: '100%', backgroundColor: 'orange', margin: 0, minHeight: '100vh'}}>
         <Paper sx={{ padding: 0, width: '80%', hieght: 'min-content', borderRadius: '26px', overflow: 'hidden', margin: 'auto' }} >
           <Grid container>
             <Grid item>
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <ZachIsDumb />
         <Divider/>
 
-        <Schedule/>
+        {/* <Schedule/> */}
         
         <Paper>
           <Chooser />

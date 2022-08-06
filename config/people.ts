@@ -68,7 +68,8 @@ export const people: Array<Person> = [
     {
         name: "Cynthia",
         imgs: [
-            "/favicon.ico",
+            "/Cynthia.jpg",
+            "/Cynthia2.jpg",
         ],
         audio: [
             "Cynth.mp3",
