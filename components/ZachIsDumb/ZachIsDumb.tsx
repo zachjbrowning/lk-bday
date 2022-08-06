@@ -22,13 +22,9 @@ const style = {
 export const ZachIsDumb = ({}: ZachIsDumbProps) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    useEffect(() => {
-        if (isOpen) playAudio("/Choose.mp3");
-    }, [isOpen])
-
     return <>
         <div className={styles.explainer} onClick={() => setIsOpen(true)}>
-            <Card sx={{flexDirection: 'row', mt: 0}}>
+            <Card sx={{flexDirection: 'row', padding: "2rem", alignItems: "center", display: "flex"}}>
                 <Typography sx={{display: 'inline'}}>
                     Why Daitlyn instead of Kaitlyn bday? &nbsp;   
                 </Typography> 

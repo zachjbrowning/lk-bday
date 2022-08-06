@@ -12,59 +12,51 @@ import { ReactNode } from "react";
 import styles from "./Schedule.module.scss";
 import Countdown from "react-countdown";
 import { LockClock, Nightlife } from "@mui/icons-material";
+import { events } from "../../config/events";
 
-export type Event = {
-    name: string;
-    time: Date;
-    icon: ReactNode;
-    description: string;
-}
-
-const events: Array<Event> = [
-    {
-        name: "Tio's",
-        time: new Date(Date.parse("2022-08-06T17:00:00.000+10:00")),
-        icon: <LocalBarIcon />,
-        description: "idk bro",
-    },
-    {
-        name: "Al Talgio",
-        time: new Date(Date.parse("2022-08-06T19:00:00.000+10:00")),
-        icon: <LocalPizzaIcon />,
-        description: "idk bro",
-    },
-    {
-        name: "The Clock",
-        time: new Date(Date.parse("2022-08-06T20:30:00.000+10:00")),
-        icon: <LockClock />,
-        description: "idk bro",
-    },
-    {
-        name: "Goros",
-        time: new Date(Date.parse("2022-08-06T22:00:00.000+10:00")),
-        icon: <Nightlife />,
-        description: "idk bro",
-    },
-]
 
 export const Schedule = () => {
 
-    const now = new Date();
+    const now = new Date(Date.parse("2022-08-06T17:01:00.000+10:00"));
 
     let upcoming = events.filter(e => e.time.getTime() > now.getTime());
-    
+    let finished = events.filter(e => e.time.getTime() < now.getTime());
+    console.log({upcoming, finished})
+    let current = finished[finished.length - 1];
+
     let next = upcoming.splice(0,1)[0]
 
-
-    return (
+    return <>
+        <Card>
+            <CardContent sx={{display:"flex", alignItems: "center", justifyContent: "center", flexDirection: "column"}}>
+                <Typography variant="h5">
+                    Current activity:
+                </Typography>
+                <Typography variant="h4">
+                    {current.name}
+                </Typography>
+                <Typography variant="subtitle1" color="gray">
+                    {current.description}
+                </Typography>
+            </CardContent>
+        </Card>
         <Card>
             <CardContent>
                 <div className={styles.countdown}>
-                    <Countdown date={next.time} renderer={({hours, seconds, minutes}) => <>
-                        <span className={styles.timer}>{String(hours).padStart(2, '0')}:{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</span>
-                    </>} />
+                    <Countdown date={next.time} renderer={({hours, seconds, minutes}) => <Typography>
+                        <span className={styles.timer}>
+                            {String(hours).padStart(2, '0')}
+                            <span className={styles.sub}>hrs</span>
+                            &nbsp;&nbsp;
+                            {String(minutes).padStart(2, '0')}
+                            <span className={styles.sub}>mins</span>
+                            &nbsp;&nbsp;
+                            {String(seconds).padStart(2, '0')}
+                            <span className={styles.sub}>s</span>
+                        </span>
+                    </Typography>} />
                     <Typography variant="h5" component="div">
-                        Until {next.name}
+                        Until next event: <span style={{fontWeight:"700"}}>{next.name}</span>
                     </Typography>
                     <Typography variant="body2">
                         {next.description}
@@ -74,5 +66,5 @@ export const Schedule = () => {
                 <EventTimeline remainingEvents={upcoming} />
             </CardContent>
         </Card>
-    )
+    </>
 }

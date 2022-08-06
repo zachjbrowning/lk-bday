@@ -4,10 +4,12 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import HotelIcon from '@mui/icons-material/Hotel';
 import RepeatIcon from '@mui/icons-material/Repeat';
+import { Event } from "../../config/events";
 
 
-import { Event } from "./Schedule";
-
+const timeFormatter = new Intl.DateTimeFormat("en-au", {
+    timeStyle: "short"
+  })
 
 type EventTimelineProps = {
     remainingEvents: Array<Event>
@@ -25,7 +27,7 @@ export const EventTimeline = ({remainingEvents}: EventTimelineProps) => {
                     variant="body2"
                     color="text.secondary"
                     >
-                    {v.time.toLocaleTimeString()}
+                    {timeFormatter.format(v.time)}
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
@@ -50,7 +52,7 @@ export const EventTimeline = ({remainingEvents}: EventTimelineProps) => {
                     variant="body2"
                     color="text.secondary"
                     >
-                    {v.time.toLocaleTimeString()}
+                    {timeFormatter.format(v.time)}
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
