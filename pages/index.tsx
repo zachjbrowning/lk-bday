@@ -3,6 +3,7 @@ import { Container } from '@mui/system'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Schedule } from '../components/Schedule/Schedule'
 
 const Home: NextPage = () => {
   return (
@@ -18,11 +19,7 @@ const Home: NextPage = () => {
             LK BDAY
           </Typography>
         
-        <Paper>
-          <Typography variant='h3' >
-            Schedule:
-          </Typography>
-        </Paper>
+        <Schedule />
         
         <Paper>
           <Typography variant='h3' >
