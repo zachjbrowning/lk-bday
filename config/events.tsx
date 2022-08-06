@@ -52,6 +52,18 @@ export const events: Array<Event> = [
             end: new Date(Date.parse("2022-08-06T17:50:00.000+10:00")),
         }
     },
+{
+        name: "Roll the chooser ",
+        time: new Date(Date.parse("2022-08-06T18:40:00.000+10:00")),
+        icon: <QuestionMark />,
+        description: "Whoever it lands on picks someone to take a shot",
+        visibleTimePeriod: {
+            start: new Date(Date.parse("2022-08-06T18:25:00.000+10:00")),
+            end: new Date(Date.parse("2022-08-06T19:00:00.000+10:00")),
+        }
+    },
+
+
     {
         name: "Al Talgio 🍕",
         time: new Date(Date.parse("2022-08-06T19:00:00.000+10:00")),
