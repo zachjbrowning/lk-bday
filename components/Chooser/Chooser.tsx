@@ -59,6 +59,10 @@ export const Chooser: React.FC = () => {
         }
     }, [handleChoice, open])
 
+useEffect(()=> {
+if (choice) playAudio(randomAUdio(choice))
+}, [choice])
+
     return (
         <>
             <Modal
