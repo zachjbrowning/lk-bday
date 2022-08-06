@@ -2,7 +2,7 @@ import { Box, Modal, Typography } from "@mui/material";
 import styles from "./ZachIsDumb.module.scss";
 import HelpIcon from '@mui/icons-material/Help';
 import { useEffect, useState } from "react";
-import { useAudio } from "../AudioPlayer/useAudio";
+import { playAudio, useAudio } from "../AudioPlayer/useAudio";
 
 
 type ZachIsDumbProps = {};
@@ -20,11 +20,10 @@ const style = {
   };
 
 export const ZachIsDumb = ({}: ZachIsDumbProps) => {
-    const play = useAudio("/Voice.mp3");
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     useEffect(() => {
-        if (isOpen) play();
+        if (isOpen) playAudio("/Choose.mp3");
     }, [isOpen])
 
     return <>

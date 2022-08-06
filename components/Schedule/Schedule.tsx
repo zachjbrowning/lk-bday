@@ -20,7 +20,7 @@ export type Event = {
 const events: Array<Event> = [
     {
         name: "Tio's",
-        time: new Date(Date.parse("2022-08-06T17:48:00.000+10:00")),
+        time: new Date(Date.parse("2022-08-06T17:00:00.000+10:00")),
         icon: <FastfoodIcon />,
         description: "idk bro",
     },

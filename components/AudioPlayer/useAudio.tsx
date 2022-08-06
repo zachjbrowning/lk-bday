@@ -5,3 +5,9 @@ export const useAudio = (audioSrc: string) => {
     
     return () => audio?.play();
 }
+
+
+export const playAudio = (audioSrc: string) => {
+    const audio = typeof Audio !== "undefined" ? new Audio(audioSrc) : undefined;
+    audio?.play();
+}
