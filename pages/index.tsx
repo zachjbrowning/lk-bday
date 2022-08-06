@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container sx={{ width: '100%',  margin: 0, minHeight: '100vh'}}>
+      <Container sx={{ width: '100%',  margin: 0, minHeight: '100vh', backgroundColor: '#df5e88'}}>
         <Paper sx={{ padding: 0, width: '80%', hieght: 'min-content', borderRadius: '26px', overflow: 'hidden', margin: 'auto' }} >
           <Grid container>
             <Grid item>

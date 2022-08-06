@@ -1,4 +1,4 @@
-import { Box, Modal, Typography } from "@mui/material";
+import { Box, Modal, Typography, Card } from "@mui/material";
 import styles from "./ZachIsDumb.module.scss";
 import HelpIcon from '@mui/icons-material/Help';
 import { useEffect, useState } from "react";
@@ -28,10 +28,12 @@ export const ZachIsDumb = ({}: ZachIsDumbProps) => {
 
     return <>
         <div className={styles.explainer} onClick={() => setIsOpen(true)}>
-                <Typography>
+            <Card sx={{flexDirection: 'row'}}>
+                <Typography sx={{display: 'inline'}}>
                     Why Daitlyn instead of Kaitlyn bday? &nbsp;   
                 </Typography> 
                 <HelpIcon color="primary"/>
+                </Card>
             </div>
             <Modal
                 open={isOpen}
