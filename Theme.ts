@@ -1,10 +1,9 @@
 import { createTheme } from "@mui/material";
-import { green, purple } from "@mui/material/colors";
 
 export const theme = createTheme({
     palette: {
         mode: 'light',
-        background: {default: 'white'}
+        
     },
     components: {
         MuiPaper: {
@@ -15,16 +14,19 @@ export const theme = createTheme({
                 }
             }
         }
-    }
+    },
+    typography: {
+        fontFamily: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(','),
+      },
   });
-
-//   : {
-//     MuiPaper: {
-//         defaultProps: {
-//             sx: {
-//                 padding: '10px',
-//                 marginTop: '20px'
-//             }
-//         }
-//     }
-// }
