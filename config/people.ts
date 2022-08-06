@@ -11,8 +11,8 @@ export const people: Array<Person> = [
     {
         name: "Lorna",
         imgs: [
-            "/lk.jpg",
             "/lornaZombie.jpg",
+            "/lor.jpg",
         ],
         audio: [
             "Lorna.mp3"

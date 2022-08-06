@@ -43,6 +43,16 @@ export const events: Array<Event> = [
         description: "Margeritas n shid",
     },
     {
+        name: "Cut Lorna's fringe ✂️",
+        time: new Date(Date.parse("2022-08-06T17:15:00.000+10:00")),
+        icon: <QuestionMark />,
+        description: "New Job, new me",
+        visibleTimePeriod: {
+            start: new Date(Date.parse("2022-08-06T17:15:00.000+10:00")),
+            end: new Date(Date.parse("2022-08-06T17:30:00.000+10:00")),
+        }
+    },
+    {
         name: "Al Talgio 🍕",
         time: new Date(Date.parse("2022-08-06T19:00:00.000+10:00")),
         icon: <LocalPizzaIcon />,
