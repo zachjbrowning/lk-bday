@@ -3,6 +3,8 @@ import { Button, Typography, Modal, Box, Paper } from "@mui/material";
 import Image from 'next/image'
 import {playAudio, useAudio} from '../AudioPlayer/useAudio';
 import { people, Person, randomAUdio, randomImage } from '../../config/people';
+import HelpIcon from '@mui/icons-material/Help';
+
 const style = {
     position: 'absolute' as 'absolute',
     display: 'flex',
@@ -10,13 +12,14 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '50%',
+    width: '300px',
     justifyContent: 'center',
     minWidth: 'min-content',
+    minHeight: '300px',
     hieght: 'max-content',
     bgcolor: 'background.paper',
     boxShadow: 24,
-    
+    padding: '2rem'
   };
 export const Chooser: React.FC = () => {
     const [open, setOpen] = React.useState(false);
@@ -73,12 +76,12 @@ export const Chooser: React.FC = () => {
                 </Typography>
                 </> : 
                 <>
-                    <Image src={choice ? randomImage(choice) : ""} width={100} height={100}  />
+                    <Image src={choice ? randomImage(choice) : ""} width={200} height={200}  />
                     <Typography variant='h4' align='center' >{choice?.name}! </Typography>
                 </>}
             </Paper>
             </Modal>
-            <Typography sx={{textAlign: "center"}} variant="h2">Chooser!</Typography>
+            <Typography sx={{textAlign: "center"}} variant="h2"><HelpIcon color='primary'/><HelpIcon color='primary'/>Chooser<HelpIcon color='primary'/><HelpIcon color='primary'/></Typography>
             <Button sx={{marginLeft: "auto", marginRight: "auto"}} variant='contained' type='button' onClick={handleOpen}>Choose</Button>
         </>
     )

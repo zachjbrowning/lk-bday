@@ -18,25 +18,18 @@ const Home: NextPage = () => {
       </Head>
 
       <Container sx={{ width: '100%',  margin: 0, minHeight: '100vh'}}>
-        <Paper sx={{ padding: 0, width: '80%', hieght: 'min-content', borderRadius: '26px', overflow: 'hidden', margin: 'auto' }} >
-          <Grid container>
-            <Grid item>
-              <Image width={500}
-                height={500}
-                src='/lk.jpg'
-                alt='l k'
-              />
-            </Grid>
-          </Grid>
-        </Paper>
-
+        {/* <Image width={50}
+          height={50}
+          src='/lk.jpg'
+          alt='l k'
+        /> */}
         <Title/>
         <ZachIsDumb />
         <Divider/>
 
         <Schedule/>
         
-        <Paper>
+        <Paper sx={{textAlign: 'center'}}>
           <Chooser />
         </Paper>
         <Box sx={{height: '20px'}}/>
