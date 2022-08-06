@@ -19,8 +19,11 @@ export const theme = createTheme({
                 root: {
                     padding: '10px',
                     marginTop: '20px',
-                    borderRadius: '2rem'
+                    borderRadius: '2rem',
                 }
+            },
+            defaultProps: {
+                elevation: 12
             }
         }
     },

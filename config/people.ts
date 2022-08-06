@@ -41,7 +41,7 @@ export const people: Array<Person> = [
     {
         name: "Bella",
         imgs: [
-            "/favicon.ico",
+            "/bella.jpg",
         ],
         audio: [
             "Ciao.mp3",
@@ -50,7 +50,7 @@ export const people: Array<Person> = [
     {
         name: "Beza",
         imgs: [
-            "/favicon.ico",
+            "/beza.jpg",
         ],
         audio: [
             "Salt.mp3",
@@ -59,7 +59,7 @@ export const people: Array<Person> = [
     {
         name: "Courtney",
         imgs: [
-            "/favicon.ico",
+            "/courtney.jpg",
         ],
         audio: [
             "Courtney.mp3",
@@ -69,7 +69,7 @@ export const people: Array<Person> = [
         name: "Cynthia",
         imgs: [
             "/Cynthia.jpg",
-            "/Cynthia2.jpg",
+            "/cynthia2.jpg",
         ],
         audio: [
             "Cynth.mp3",
@@ -78,7 +78,7 @@ export const people: Array<Person> = [
     {
         name: "Josh",
         imgs: [
-            "/favicon.ico",
+            "/josh.jpg",
         ],
         audio: [
             "Joshhhh.mp3",
@@ -87,7 +87,7 @@ export const people: Array<Person> = [
     {
         name: "Alex Mac",
         imgs: [
-            "/favicon.ico",
+            "/mac.jpg",
         ],
         audio: [
             "Mcdonald.mp3",
@@ -96,7 +96,7 @@ export const people: Array<Person> = [
     {
         name: "Mim",
         imgs: [
-            "/favicon.ico",
+            "/mim.jpg",
         ],
         audio: [
             "Mimim.mp3",
@@ -105,7 +105,7 @@ export const people: Array<Person> = [
     {
         name: "Nick",
         imgs: [
-            "/favicon.ico",
+            "/nick.jpg",
         ],
         audio: [
             "Sprinkles.mp3",
@@ -114,7 +114,7 @@ export const people: Array<Person> = [
     {
         name: "Tom",
         imgs: [
-            "/favicon.ico",
+            "/tom.jpg",
         ],
         audio: [
             "Tom.mp3",
