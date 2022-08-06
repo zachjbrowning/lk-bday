@@ -12,15 +12,17 @@ import { ReactNode } from "react";
 import styles from "./Schedule.module.scss";
 import Countdown from "react-countdown";
 import { LockClock, Nightlife } from "@mui/icons-material";
-import { events } from "../../config/events";
+import { events, isVisible } from "../../config/events";
 
 
 export const Schedule = () => {
+    const eventList = events.sort((a,b) => (a.time.getTime() > b.time.getTime() ? 1 : -1))
+    
+    const now = new Date();
+    // const now = new Date(Date.parse("2022-08-06T21:31:00.000+10:00"));
 
-    const now = new Date(Date.parse("2022-08-06T17:01:00.000+10:00"));
-
-    let upcoming = events.filter(e => e.time.getTime() > now.getTime());
-    let finished = events.filter(e => e.time.getTime() < now.getTime());
+    let upcoming = eventList.filter(e => e.time.getTime() > now.getTime() && isVisible(e, now));
+    let finished = eventList.filter(e => e.time.getTime() < now.getTime() && isVisible(e, now));
     console.log({upcoming, finished})
     let current = finished[finished.length - 1];
 

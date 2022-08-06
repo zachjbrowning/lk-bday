@@ -78,8 +78,8 @@ export const Chooser: React.FC = () => {
                 </>}
             </Paper>
             </Modal>
-            <Typography  variant="h2">Chooser!</Typography>
-            <Button  variant='contained' type='button' onClick={handleOpen}>Choose</Button>
+            <Typography sx={{textAlign: "center"}} variant="h2">Chooser!</Typography>
+            <Button sx={{marginLeft: "auto", marginRight: "auto"}} variant='contained' type='button' onClick={handleOpen}>Choose</Button>
         </>
     )
 }
