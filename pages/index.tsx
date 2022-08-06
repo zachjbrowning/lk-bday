@@ -1,4 +1,4 @@
-import { Grid, Link, Paper, Typography } from '@mui/material'
+import { Chip, Divider, Grid, Link, Paper, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -15,18 +15,30 @@ const Home: NextPage = () => {
       </Head>
 
       <Container sx={{ width: '100%'}} color='white'>
+        <Paper sx={{ padding: 0, width: '80%', hieght: 'min-content', borderRadius: '26px', overflow: 'hidden', margin: 'auto' }} >
+          <Grid container>
+            <Grid item>
+              <Image width={500}
+                height={500}
+                src='/lk.jpg'
+                alt='l k'
+              />
+            </Grid>
+          </Grid>
+        </Paper>
           <Typography variant='h1' align={'center'}>
             LK BDAY
           </Typography>
+      
+
+          <Divider/>
         
-        <Schedule />
+        <Schedule/>
         
         <Paper>
-          <Typography variant='h3' >
-            Chooser:
-          </Typography>
+          <Chooser />
         </Paper>
-        
+
       </Container>
     </>
 
