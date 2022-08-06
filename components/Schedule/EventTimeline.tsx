@@ -18,7 +18,7 @@ export const EventTimeline = ({remainingEvents}: EventTimelineProps) => {
     return <Timeline position="alternate">
         {
             remainingEvents.map((v,i) => {
-                if (i % 2 == 0) return <TimelineItem key={i}>
+                if (i % 2 == 1) return <TimelineItem key={i}>
                     <TimelineOppositeContent
                     sx={{ m: 'auto 0' }}
                     align="right"

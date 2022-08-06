@@ -9,7 +9,7 @@ export const Title = ({}: TitleProps) => {
             Lorna
         </Typography>
         <Typography sx={{width: "100%"}} variant='h2' align={"right"}>
-            + Dubz
+            + Daitlyn
         </Typography>
         <div>
             

@@ -5,10 +5,13 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import HotelIcon from '@mui/icons-material/Hotel';
 import RepeatIcon from '@mui/icons-material/Repeat';
+import LocalPizzaIcon from '@mui/icons-material/LocalPizza';
+import LocalBarIcon from '@mui/icons-material/LocalBar';
 import { Typography } from "@mui/material";
 import { ReactNode } from "react";
 import styles from "./Schedule.module.scss";
 import Countdown from "react-countdown";
+import { LockClock, Nightlife } from "@mui/icons-material";
 
 export type Event = {
     name: string;
@@ -21,25 +24,25 @@ const events: Array<Event> = [
     {
         name: "Tio's",
         time: new Date(Date.parse("2022-08-06T17:00:00.000+10:00")),
-        icon: <FastfoodIcon />,
+        icon: <LocalBarIcon />,
         description: "idk bro",
     },
     {
         name: "Al Talgio",
         time: new Date(Date.parse("2022-08-06T19:00:00.000+10:00")),
-        icon: <LaptopMacIcon />,
+        icon: <LocalPizzaIcon />,
         description: "idk bro",
     },
     {
         name: "The Clock",
         time: new Date(Date.parse("2022-08-06T20:30:00.000+10:00")),
-        icon: <HotelIcon />,
+        icon: <LockClock />,
         description: "idk bro",
     },
     {
         name: "Goros",
         time: new Date(Date.parse("2022-08-06T22:00:00.000+10:00")),
-        icon: <RepeatIcon />,
+        icon: <Nightlife />,
         description: "idk bro",
     },
 ]

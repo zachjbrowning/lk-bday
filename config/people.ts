@@ -28,14 +28,14 @@ export const people: Array<Person> = [
         ]
     },
     {
-        name: "Kaitlyn",
+        name: "Daitlyn",
         imgs: [
             "/kK.jpg",
-            "/kShhessh.jpg",
+            "/kShessh.jpg",
         ],
         audio: [
-            "Kaityln1.mp3",
-            "Kaityln2.mp3",
+            "Kaitlyn1.mp3",
+            "Kaitlyn2.mp3",
         ]
     },
     {

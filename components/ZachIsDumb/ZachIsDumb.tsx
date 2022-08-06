@@ -29,9 +29,9 @@ export const ZachIsDumb = ({}: ZachIsDumbProps) => {
     return <>
         <div className={styles.explainer} onClick={() => setIsOpen(true)}>
                 <Typography>
-                    Why LD bday instead of LK bday? &nbsp;   
+                    Why Daitlyn instead of Kaitlyn bday? &nbsp;   
                 </Typography> 
-                <HelpIcon color="info"/>
+                <HelpIcon color="primary"/>
             </div>
             <Modal
                 open={isOpen}
