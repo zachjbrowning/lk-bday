@@ -18,7 +18,8 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     padding: '10px',
-                    marginTop: '20px'
+                    marginTop: '20px',
+                    borderRadius: '2rem'
                 }
             }
         },

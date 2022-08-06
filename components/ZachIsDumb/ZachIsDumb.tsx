@@ -28,7 +28,7 @@ export const ZachIsDumb = ({}: ZachIsDumbProps) => {
 
     return <>
         <div className={styles.explainer} onClick={() => setIsOpen(true)}>
-            <Card sx={{flexDirection: 'row'}}>
+            <Card sx={{flexDirection: 'row', mt: 0}}>
                 <Typography sx={{display: 'inline'}}>
                     Why Daitlyn instead of Kaitlyn bday? &nbsp;   
                 </Typography> 

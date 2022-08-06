@@ -1,7 +1,10 @@
 .explainer {
     display: flex;
     justify-content: center;
+    margin: auto;
+    max-width: fit-content;
     align-items: center;
     cursor: pointer;
     padding: 2rem 0;
+    border-bottom: solid white 2px;
 }
