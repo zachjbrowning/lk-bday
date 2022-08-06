@@ -31,7 +31,7 @@ export const EventTimeline = ({remainingEvents}: EventTimelineProps) => {
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
-                        <TimelineDot>
+                        <TimelineDot color="primary">
                             {v.icon}
                         </TimelineDot>
                         {
