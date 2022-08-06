@@ -44,7 +44,7 @@ export const people: Array<Person> = [
             "/favicon.ico",
         ],
         audio: [
-            "Bella.mp3",
+            "Ciao.mp3",
         ]
     },
     {
@@ -53,7 +53,7 @@ export const people: Array<Person> = [
             "/favicon.ico",
         ],
         audio: [
-            "Beza.mp3",
+            "Salt.mp3",
         ]
     },
     {
@@ -81,7 +81,7 @@ export const people: Array<Person> = [
             "/favicon.ico",
         ],
         audio: [
-            "Josh.mp3",
+            "Joshhhh.mp3",
         ]
     },
     {
@@ -90,7 +90,7 @@ export const people: Array<Person> = [
             "/favicon.ico",
         ],
         audio: [
-            "Macca.mp3",
+            "Mcdonald.mp3",
         ]
     },
     {
@@ -99,7 +99,7 @@ export const people: Array<Person> = [
             "/favicon.ico",
         ],
         audio: [
-            "Mim.mp3",
+            "Mimim.mp3",
         ]
     },
     {
@@ -108,7 +108,7 @@ export const people: Array<Person> = [
             "/favicon.ico",
         ],
         audio: [
-            "Nick.mp3",
+            "Sprinkles.mp3",
         ]
     },
     {
