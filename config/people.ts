@@ -15,7 +15,7 @@ export const people: Array<Person> = [
             "/lor.jpg",
         ],
         audio: [
-            "Lorna.mp3"
+            "/Lorna.mp3"
         ]
     },
     {
@@ -24,7 +24,7 @@ export const people: Array<Person> = [
             "/zz.jpg",
         ],
         audio: [
-            "Choose.mp3"
+            "/Choose.mp3"
         ]
     },
     {
@@ -34,8 +34,8 @@ export const people: Array<Person> = [
             "/kShessh.jpg",
         ],
         audio: [
-            "Kaitlyn1.mp3",
-            "Kaitlyn2.mp3",
+            "/Kaitlyn1.mp3",
+            "/Kaitlyn2.mp3",
         ]
     },
     {
@@ -44,7 +44,7 @@ export const people: Array<Person> = [
             "/bella.jpg",
         ],
         audio: [
-            "Ciao.mp3",
+            "/Ciao.mp3",
         ]
     },
     {
@@ -53,7 +53,7 @@ export const people: Array<Person> = [
             "/beza.jpg",
         ],
         audio: [
-            "Salt.mp3",
+            "/Salt.mp3",
         ]
     },
     {
@@ -62,7 +62,7 @@ export const people: Array<Person> = [
             "/courtney.jpg",
         ],
         audio: [
-            "Courtney.mp3",
+            "/Courtney.mp3",
         ]
     },
     {
@@ -72,7 +72,7 @@ export const people: Array<Person> = [
             "/cynthia2.jpg",
         ],
         audio: [
-            "Cynth.mp3",
+            "/Cynth.mp3",
         ]
     },
     {
@@ -81,7 +81,7 @@ export const people: Array<Person> = [
             "/josh.jpg",
         ],
         audio: [
-            "Joshhhh.mp3",
+            "/Joshhhh.mp3",
         ]
     },
     {
@@ -90,7 +90,7 @@ export const people: Array<Person> = [
             "/mac.jpg",
         ],
         audio: [
-            "Mcdonald.mp3",
+            "/Mcdonald.mp3",
         ]
     },
     {
@@ -99,7 +99,7 @@ export const people: Array<Person> = [
             "/mim.jpg",
         ],
         audio: [
-            "Mimim.mp3",
+            "/Mimim.mp3",
         ]
     },
     {
@@ -108,7 +108,7 @@ export const people: Array<Person> = [
             "/nick.jpg",
         ],
         audio: [
-            "Sprinkles.mp3",
+            "/Sprinkles.mp3",
         ]
     },
     {
@@ -117,7 +117,7 @@ export const people: Array<Person> = [
             "/tom.jpg",
         ],
         audio: [
-            "Tom.mp3",
+            "/Tom.mp3",
         ]
     },
 ]
