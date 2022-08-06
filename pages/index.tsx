@@ -1,4 +1,4 @@
-import { Chip, Divider, Grid, Link, Paper, Typography } from '@mui/material'
+import { Chip, Divider, Grid, Link, Paper, Typography, Box } from '@mui/material'
 import { Container } from '@mui/system'
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container sx={{ width: '100%',  margin: 0, minHeight: '100vh', backgroundColor: '#df5e88'}}>
+      <Container sx={{ width: '100%',  margin: 0, minHeight: '100vh'}}>
         <Paper sx={{ padding: 0, width: '80%', hieght: 'min-content', borderRadius: '26px', overflow: 'hidden', margin: 'auto' }} >
           <Grid container>
             <Grid item>
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         <Paper>
           <Chooser />
         </Paper>
-
+        <Box sx={{height: '20px'}}/>
       </Container>
     </>
 

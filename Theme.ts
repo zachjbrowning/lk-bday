@@ -22,14 +22,6 @@ export const theme = createTheme({
                     borderRadius: '2rem'
                 }
             }
-        },
-        MuiCssBaseline: {
-            styleOverrides: {
-                body: {
-                    padding: 0,
-                    margin: 0
-                }
-            }
         }
     },
     typography: {
