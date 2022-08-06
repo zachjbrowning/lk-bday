@@ -3,11 +3,28 @@ import { green, purple } from "@mui/material/colors";
 
 export const theme = createTheme({
     palette: {
-        primary: {
-          main: purple[500],
-        },
-        secondary: {
-          main: green[500],
-        },
-      },
+        mode: 'light',
+        background: {default: 'white'}
+    },
+    components: {
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    padding: '10px',
+                    marginTop: '20px'
+                }
+            }
+        }
+    }
   });
+
+//   : {
+//     MuiPaper: {
+//         defaultProps: {
+//             sx: {
+//                 padding: '10px',
+//                 marginTop: '20px'
+//             }
+//         }
+//     }
+// }
