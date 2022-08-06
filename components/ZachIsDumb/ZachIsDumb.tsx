@@ -1,24 +1,31 @@
 import { Box, Modal, Typography } from "@mui/material";
 import styles from "./ZachIsDumb.module.scss";
 import HelpIcon from '@mui/icons-material/Help';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAudio } from "../AudioPlayer/useAudio";
 
 
 type ZachIsDumbProps = {};
 
+const style = {
+    position: 'absolute' as 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    bgcolor: 'background.paper',
+    minWidth: "70%",
+    borderRadius: '4px',
+    boxShadow: 24,
+    p: 4,
+  };
+
 export const ZachIsDumb = ({}: ZachIsDumbProps) => {
-    const style = {
-        position: 'absolute' as 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        bgcolor: 'background.paper',
-        minWidth: "70%",
-        borderRadius: '4px',
-        boxShadow: 24,
-        p: 4,
-      };
+    const play = useAudio("/Voice.mp3");
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (isOpen) play();
+    }, [isOpen])
 
     return <>
         <div className={styles.explainer} onClick={() => setIsOpen(true)}>
